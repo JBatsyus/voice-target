@@ -30,7 +30,7 @@
     }
 }
 
-/*------------------ HERO------------------  */
+
 .voice-hero {
     background:
         url("images/voice-hero-bg.png") no-repeat center bottom / cover,
@@ -291,6 +291,10 @@
         max-width: 280px;
         margin: 0 auto;
     }
+
+    .voice-hero__button {
+        margin-bottom: 32px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -417,7 +421,7 @@
 
 .voice-budget {
     background: #14073b;
-    padding: clamp(56px, 4.5vw + 24px, 88px) 0;
+    padding: 88px 0;
     overflow: hidden;
 }
 
@@ -516,12 +520,14 @@
 }
 
 .voice-budget__disclaimer {
-    margin-top: 40px;
     font-family: "Museo Sans Cyrl", sans-serif;
+    margin-top: 40px;
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
-    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.42857;
+    color: #fff;
+    opacity: 0.7;
+
 }
 
 @media (max-width: 767px) {
@@ -579,18 +585,18 @@
 }
 
 .voice-products {
-    background: #14073b;
-    padding: clamp(56px, 4.5vw + 24px, 88px) 0;
+    background: #272054;
+    padding: 88px 0;
 }
 
 .voice-products__title {
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
-    font-size: clamp(24px, 1.2rem + 1vw, 34px);
+    font-size: 34px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #ffffff;
-    margin-bottom: clamp(32px, 2vw + 16px, 40px);
+    color: #fff;
+    margin-bottom: 40px;
 }
 
 .voice-products__tabs {
@@ -606,13 +612,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60px;
+    height: 60px;
     padding: 16px;
     border: 0;
     background: transparent;
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
-    font-size: clamp(16px, 0.8rem + 0.5vw, 20px);
+    font-size: 16px;
     line-height: 1.3;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -641,7 +647,7 @@
 .voice-products__steps {
     display: flex;
     align-items: stretch;
-    gap: 27px;
+    gap: 34px;
 }
 
 .voice-products__step {
@@ -652,10 +658,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    padding: clamp(20px, 1.2vw + 12px, 24px);
+    padding: 24px;
     border-radius: 16px;
     background: rgba(144, 175, 224, 0.1);
-    box-shadow: inset 0 0 0 1px rgba(144, 175, 224, 0.15);
+    border: 1px solid rgba(144, 175, 224, 0.15);
     box-sizing: border-box;
 }
 
@@ -663,7 +669,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: calc(100% + 13.5px);
+    left: calc(100% + 17px);
     width: 11px;
     height: 18px;
     transform: translate(-50%, -50%);
@@ -709,7 +715,7 @@
     }
 
     .voice-products__step:not(:last-child)::after {
-        top: calc(100% + 21px);
+        top: calc(100% + 23px);
         left: 50%;
         transform: translate(-50%, -50%) rotate(90deg);
     }
@@ -731,9 +737,8 @@
     }
 
     .voice-products__tab {
-        min-height: 52px;
-        padding: 16px;
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.42857;
         line-height: 20px;
     }
 
@@ -747,22 +752,23 @@
     }
 
     .voice-products__step-text {
+        font-weight: 600;
         font-size: 20px;
-        line-height: 26px;
+        line-height: 1.3;
     }
 }
 
 .voice-control {
     background: #eef8fe;
-    padding: clamp(56px, 4.5vw + 24px, 88px) 0;
+    padding: 88px 0;
 }
 
 .voice-control__title {
     max-width: 670px;
-    margin-bottom: clamp(32px, 2vw + 16px, 40px);
+    margin-bottom: 40px;
     font-family: "Dela Gothic One", sans-serif;
     font-weight: 400;
-    font-size: clamp(24px, 1.2rem + 1vw, 34px);
+    font-size: 34px;
     line-height: 1.2;
     text-transform: uppercase;
     color: #14073b;
@@ -892,7 +898,7 @@
     min-width: 0;
 }
 
-.voice-control__format + .voice-control__format {
+.voice-control__format+.voice-control__format {
     margin-left: 20px;
     padding-left: 20px;
     border-left: 1px solid rgba(20, 7, 59, 0.2);
@@ -904,7 +910,7 @@
     gap: clamp(6px, 0.2rem + 0.6vw, 16px);
     margin: 0 0 clamp(6px, 0.2rem + 0.4vw, 12px);
     font-family: "Museo Sans Cyrl", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: clamp(14px, 0.75rem + 0.4vw, 16px);
     line-height: 1.5;
     color: #14073b;
@@ -973,7 +979,7 @@
         gap: 12px;
     }
 
-    .voice-control__format + .voice-control__format {
+    .voice-control__format+.voice-control__format {
         margin-left: 0;
         padding-left: 0;
         border-left: none;
@@ -981,8 +987,14 @@
 }
 
 @media (max-width: 767px) {
+    .voice-control {
+        padding: 56px 0;
+    }
+
     .voice-control__title {
         max-width: none;
+        font-size: 24px;
+        line-height: 1.33333;
         line-height: 32px;
     }
 
@@ -1010,5 +1022,185 @@
     .voice-control__format-title::before {
         width: 14px;
         height: 14px;
+    }
+}
+
+
+/*------------------ ГЛОССАРИЙ ------------------  */
+.voice-glossary {
+    background: #14073b;
+    padding: 40px 0;
+}
+
+.voice-glossary__text {
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .voice-glossary {
+        padding: 56px 0 32px 0;
+    }
+
+}
+
+/*------------------ ФОРМА ------------------  */
+.voice-lead {
+    background-image: url("images/lead-bg.png");
+    background-color: #14073b;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 88px 0;
+}
+
+.voice-lead__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.voice-lead__title {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+    max-width: 870px;
+}
+
+.voice-lead__subtitle {
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.voice-lead__form {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.voice-lead__input {
+    width: 100%;
+    border-radius: 8px;
+    padding: 18px;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.voice-lead__input::placeholder {
+    color: #7e7e7d;
+}
+
+.voice-lead__input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.4);
+}
+
+.voice-lead__button {
+    display: inline-block;
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    border-radius: 8px;
+    padding: 18px 40px;
+
+    border: none;
+    background: #00c1f1;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease;
+}
+
+.voice-lead__button:hover {
+    background-color: #3699b2 !important;
+}
+
+.voice-lead__policy {
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    max-width: 560px;
+    margin: 0;
+    opacity: 0.6;
+}
+
+.voice-lead__policy-link {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    opacity: 0.6;
+    display: inline;
+}
+
+.voice-lead__policy-link:hover {
+    color: #00c2ff;
+}
+
+@media (max-width: 768px) {
+    .voice-lead {
+        padding: 56px 0;
+    }
+
+    .voice-lead__title {
+        font-size: 24px;
+        line-height: 1.33333;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .voice-lead__subtitle {
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 24px;
+    }
+
+    .voice-lead__form {
+        max-width: 100%;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .voice-lead__input {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .voice-lead__button {
+        padding: 20px 40px;
+        font-size: 14px;
+        line-height: 1.42857;
+    }
+
+    .voice-lead__policy {
+        text-align: left;
     }
 }
